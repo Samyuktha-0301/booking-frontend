@@ -90,7 +90,7 @@ const Register = () => {
         e.preventDefault();
         dispatch({ type: "REGISTER_START" });
         try {
-            const res = await axios.post("http://localhost:5000/api/auth/register", credentials);
+            const res = await axios.post("https://booking-backend-t6i2.onrender.com/api/auth/register", credentials);
             console.log(credentials);
             dispatch({ type: "RESISTER_SUCCESS", payload: res.data.details });
             alert(JSON.stringify(res.data));
