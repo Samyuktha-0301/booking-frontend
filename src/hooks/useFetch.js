@@ -10,7 +10,7 @@ const useFetch = (url) => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const res = await axios.get(`http://localhost:5000${url}`);
+        const res = await axios.get(`https://booking-backend-t6i2.onrender.com${url}`);
         console.log(res);
         setData(res.data);
       } catch (err) {
@@ -24,7 +24,7 @@ const useFetch = (url) => {
   const reFetch = async () => {
     setLoading(true);
     try {
-      const res = await axios.get(`http://localhost:5000${url}`);
+      const res = await axios.get(`https://booking-backend-t6i2.onrender.com${url}`);
       setData(res.data);
     } catch (err) {
       setError(err);
